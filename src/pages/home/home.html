@@ -12,11 +12,11 @@
   
       <img [src]="pessoa.photo">
   
-      <ion-card-content center text-center>
-        <h1 class="feed_titlenews" center text-center>{{ pessoa.name + ' ' + pessoa.surname }}</h1>
-      </ion-card-content>
-  
-      <button ion-button block (click)="abrirDetalhes(pessoa)">Details</button>
+      <button ion-button icon-contact block (click)="abrirDetalhes(pessoa)" color="dark">
+          <ion-icon name="contact" style="margin-right: 10px"></ion-icon> {{pessoa.name + ' ' + pessoa.surname }}
+      </button>
+      
+      
     </ion-card>
    
   
