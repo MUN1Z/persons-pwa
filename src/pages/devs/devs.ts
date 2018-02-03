@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { DevDetailsPage } from '../dev-details/dev-details';
+
 
 /**
  * Generated class for the DevsPage page.
@@ -24,4 +26,9 @@ export class DevsPage {
     });
   
   }
+
+  goToDetail(dev: any){
+    this.navCtrl.push(DevDetailsPage,dev);
+  }
+
 }

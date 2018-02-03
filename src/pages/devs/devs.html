@@ -19,7 +19,7 @@
 <ion-content padding>
   <ion-list>
 
-    <ion-item *ngFor="let dev of developerList" ng-click="acess_detail()">
+    <ion-item *ngFor="let dev of developerList" (click)="goToDetail(dev)">
       <ion-avatar item-start>
         <img src="{{dev.image}}">
       </ion-avatar>

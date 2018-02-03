@@ -18,10 +18,13 @@ export class DevDetailsPage {
   public dev = { name: 'teste'}
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    let id = navParams.get('id');
+    let name = navParams.get('name');
+    let email = navParams.get('email');
+    let link = navParams.get('link');
+    let image = navParams.get('image');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DevDetailsPage');
-  }
+
 
 }
