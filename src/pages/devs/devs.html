@@ -21,7 +21,7 @@
 
     <ion-item *ngFor="let dev of developerList" (click)="goToDetail(dev)">
       <ion-avatar item-start>
-        <img src="{{dev.image}}">
+        <img [src]="dev.image">
       </ion-avatar>
       <h2>{{dev.name}}</h2>
     </ion-item>

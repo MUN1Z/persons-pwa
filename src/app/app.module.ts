@@ -14,6 +14,7 @@ import { HttpModule } from '@angular/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { PersonProvider } from '../providers/person/person';
+import { DetailsPage } from '../pages/details/details';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PersonProvider } from '../providers/person/person';
     HomePage,
     DevsPage,
     AboutPage,
-    DevDetailsPage
+    DevDetailsPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { PersonProvider } from '../providers/person/person';
     HomePage,
     DevsPage,
     AboutPage,
-    DevDetailsPage
+    DevDetailsPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core'; 
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PersonProvider } from '../../providers/person/person';
+import { DetailsPage } from '../details/details';
 
 /**
  * Generated class for the HomePage page.
@@ -22,7 +23,7 @@ export class HomePage {
   public lista_pessoas = new Array<any>();
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private personProvider: PersonProvider
   ) {
@@ -50,6 +51,30 @@ export class HomePage {
         console.log(error);
 
       })
+  }
+
+
+
+
+  abrirDetalhes(pessoa) {
+
+    this.navCtrl.push(
+      DetailsPage,
+      {
+        name: pessoa.name,
+        surname: pessoa.surname,
+        gender: pessoa.gender,
+        region: pessoa.region,
+        age: pessoa.age,
+        email: pessoa.email,
+        photo: pessoa.photo
+
+
+      }
+
+
+
+    );
   }
 
 
