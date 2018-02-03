@@ -4,7 +4,6 @@ import { Storage } from '@ionic/storage';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
 
 import { HomePage } from '../pages/home/home';
 import { DevsPage } from '../pages/devs/devs';
@@ -44,25 +43,25 @@ export class MyApp {
       "name": "Elioenai Morais",
       "email": "elimorais.webdesigner@gmail.com",
       "link": "https://github.com/nassaustudent",
-      "image": "aa"
+      "image": "../assets/imgs/eli.jpg"
       }, {
       "id": 2,
       "name": "Felipe Muniz",
       "email": "felipemuniz.net@gmail.com",
       "link": "https://github.com/Mun1z",
-      "image": "bb"
+      "image": "../assets/imgs/felipe.jpg"
       }, {
       "id": 3,
       "name": "Marcio Ferreira",
       "email": "marcio.fp.m2@gmail.com",
       "link": "https://github.com/marcioferreirap",
-      "image": "img/avatar-cher.png"
+      "image": "../assets/imgs/marcio.jpg"
       }, {
       "id": 4,
       "name": "Thiago Rafael",
       "email": "tr.thiagorafael@gmail.com",
       "link": "https://github.com/trthiagorafael",
-      "image": "dd"
+      "image": "../assets/imgs/thiago.jpg"
     }];
 
     storage.set('developers', developers);
