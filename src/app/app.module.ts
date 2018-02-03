@@ -4,10 +4,6 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { IonicStorageModule } from '@ionic/storage';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
-
 import { HomePage } from '../pages/home/home';
 import { DevsPage } from '../pages/devs/devs';
 import { AboutPage } from '../pages/about/about';
@@ -22,9 +18,6 @@ import { PersonProvider } from '../providers/person/person';
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
     HomePage,
     DevsPage,
     AboutPage,
@@ -39,9 +32,6 @@ import { PersonProvider } from '../providers/person/person';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage,
     HomePage,
     DevsPage,
     AboutPage,
