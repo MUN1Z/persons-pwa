@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the DevsPage page.
@@ -15,11 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DevsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  public developerList : any;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DevsPage');
+  constructor(public navCtrl: NavController, public navParams: NavParams,public storage: Storage) {
+    this.storage.get('developers').then((val) => {
+      this.developerList = val;
+    });
+  
   }
-
 }

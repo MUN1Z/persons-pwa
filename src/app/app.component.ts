@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
@@ -26,7 +27,8 @@ export class MyApp {
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private storage: Storage
   ) {
     this.initializeApp();
 
@@ -36,6 +38,35 @@ export class MyApp {
       { title: 'Developers', component: DevsPage },
       { title: 'About', component: AboutPage }
     ];
+    
+    let developers = [{
+      "id": 1,
+      "name": "Elioenai Morais",
+      "email": "elimorais.webdesigner@gmail.com",
+      "link": "https://github.com/nassaustudent",
+      "image": "aa"
+      }, {
+      "id": 2,
+      "name": "Felipe Muniz",
+      "email": "felipemuniz.net@gmail.com",
+      "link": "https://github.com/Mun1z",
+      "image": "bb"
+      }, {
+      "id": 3,
+      "name": "Marcio Ferreira",
+      "email": "marcio.fp.m2@gmail.com",
+      "link": "https://github.com/marcioferreirap",
+      "image": "img/avatar-cher.png"
+      }, {
+      "id": 4,
+      "name": "Thiago Rafael",
+      "email": "tr.thiagorafael@gmail.com",
+      "link": "https://github.com/trthiagorafael",
+      "image": "dd"
+    }];
+
+    storage.set('developers', developers);
+    
   }
 
   initializeApp() {
@@ -53,4 +84,6 @@ export class MyApp {
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
+
+
 }
