@@ -15,14 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DevDetailsPage {
 
-  public dev = { name: 'teste'}
+  public dev: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    let id = navParams.get('id');
-    let name = navParams.get('name');
-    let email = navParams.get('email');
-    let link = navParams.get('link');
-    let image = navParams.get('image');
+    this.dev = navParams.get('dev');
   }
 
 

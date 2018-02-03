@@ -28,7 +28,9 @@ export class DevsPage {
   }
 
   goToDetail(dev: any){
-    this.navCtrl.push(DevDetailsPage,dev);
+    this.navCtrl.push(DevDetailsPage,{
+      dev: dev
+    });
   }
 
 }
