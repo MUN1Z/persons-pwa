@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PersonProvider } from '../../providers/person/person';
 
 /**
  * Generated class for the HomePage page.
@@ -12,14 +13,44 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
+  providers: [
+    PersonProvider
+  ]
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public lista_pessoas = new Array<any>();
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private personProvider: PersonProvider
+  ) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+  ionViewDidEnter() {
+    this.carregarPerson();
   }
+
+
+
+  carregarPerson() {
+    this.lista_pessoas = [];
+
+    this.personProvider.getLatestPersons().subscribe(
+      data => {
+        try {
+          const response = (data as any);
+          this.lista_pessoas.push(JSON.parse(response._body));
+        } catch (erro) {
+          console.log('deu erro', erro);
+        }
+      },
+      error => {
+        console.log(error);
+
+      })
+  }
+
 
 }
