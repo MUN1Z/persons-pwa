@@ -7,7 +7,10 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>dev-details</ion-title>
+    <button ion-button menuToggle icon-only>
+        <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>Details</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,4 +18,12 @@
 
 <ion-content padding>
 
-</ion-content>
+    <ion-item text-center>
+      <ion-img src="https://www.library.caltech.edu/sites/default/files/styles/headshot/public/default_images/user.png" style="width: 300px; height: 300px;"></ion-img>
+    </ion-item>
+  
+    <ion-item text-wrap>
+      <ion-label>{{dev.name}}</ion-label>
+    </ion-item>
+    
+  </ion-content>
