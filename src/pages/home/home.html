@@ -1,35 +1,23 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>App Pessoas</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <ion-card *ngFor="let pessoa of lista_pessoas">
-
-
-
-    <img [src]="pessoa.photo">
-
-    <ion-card-content>
-      <h2 class="feed_titlenews">{{ pessoa.name }}</h2>
-      <p class="feed_date">{{ pessoa.surname }}</p>
-      
-    </ion-card-content>
-
-    <ion-row>
-      
-      <ion-col center text-center>
-        <ion-note>
-          {{ pessoa.email }}
-        </ion-note>
-      </ion-col>
-    </ion-row>
-    <button ion-button block (click)="abrirDetalhes(pessoa)">Veja Mais</button>
-  </ion-card>
- 
-
-</ion-content>
+    <ion-navbar>
+      <button ion-button menuToggle icon-only>
+        <ion-icon name='menu'></ion-icon>
+      </button>
+      <ion-title>Persons PWA</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <ion-card *ngFor="let pessoa of lista_pessoas">
+  
+      <img [src]="pessoa.photo">
+  
+      <ion-card-content center text-center>
+        <h1 class="feed_titlenews" center text-center>{{ pessoa.name + ' ' + pessoa.surname }}</h1>
+      </ion-card-content>
+  
+      <button ion-button block (click)="abrirDetalhes(pessoa)">Details</button>
+    </ion-card>
+   
+  
+  </ion-content>
